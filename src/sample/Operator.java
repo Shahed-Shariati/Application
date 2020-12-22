@@ -45,12 +45,12 @@ public class Operator {
     public void btnBack(javafx.event.ActionEvent actionEvent) throws SQLException, IOException {
         Stage stage = (Stage) btnBack.getScene().getWindow();
         stage.close();
-        Stage primaryStage = new Stage();
+       /* Stage primaryStage = new Stage();
         AnchorPane root =  FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         Scene scene = new Scene(root,364, 444);
         primaryStage.setScene(scene);
         primaryStage.show();
-        System.out.println("he;llo");
+        System.out.println("he;llo");*/
     }
 
     public void pressBtnDone(ActionEvent actionEvent) {
@@ -60,7 +60,7 @@ public class Operator {
             DataBase dataBase;
             dataBase = new DataBase();
             dataBase.setQuery("insert into Login (OpraterName,OpreatorUser,OpreatorPass) values (?,?,?)");
-            dataBase.InsertData(operatorSerGet);
+            dataBase.InsertintoDataBase(operatorSerGet);
 
         }catch (Exception e){
             System.out.println("Error");

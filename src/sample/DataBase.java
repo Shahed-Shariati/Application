@@ -7,13 +7,14 @@ public class DataBase {
     final private String userName = "admin1";
     final private String passWord = "123qweR";
     private String query;
+    private static Statement statement;
     private static Connection connection;
     private static PreparedStatement preparedStatement;
     public DataBase() throws SQLException
     {
         try {
             connection = DriverManager.getConnection(url, userName, passWord);
-//            preparedStatement = connection.prepareStatement(query);
+
             System.out.println("connect");
         }catch (SQLException e){
             System.out.println(e);
@@ -27,7 +28,9 @@ public class DataBase {
 
 
 
-    public void InsertData(OperatorSerGet info) throws SQLException
+
+
+    public void InsertintoDataBase(OperatorSerGet info) throws SQLException
     {
         try {
             preparedStatement = connection.prepareStatement(query);
